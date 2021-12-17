@@ -1,19 +1,22 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { FiCalendar, FiUser, FiClock } from 'react-icons/fi';
 
 import Prismic from '@prismicio/client';
 
 import { RichText } from 'prismic-dom';
-import { useRouter } from 'next/router';
+
 import { getPrismicClient } from '../../services/prismic';
 
 import commonStyles from '../../styles/common.module.scss';
 import styles from './post.module.scss';
 
 import Header from '../../components/Header';
+import Comments from '../../components/Comments';
 
 import { formatDate } from '../../utils';
 
