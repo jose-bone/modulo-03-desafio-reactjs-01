@@ -18,6 +18,7 @@ import Header from '../../components/Header';
 import { formatDate } from '../../utils';
 
 interface Post {
+  uid?: string;
   first_publication_date: string | null;
   last_publication_date: string | null;
   data: {
